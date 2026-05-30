@@ -59,7 +59,6 @@ It includes:
 
 > The frontend currently uses the connected wallet address as the authenticated caller for each contract operation.
 
-
 ## Notes
 
 - The contract currently stores pending refunds for outbid bidders, enabling manual refund claims.
