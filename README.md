@@ -59,7 +59,6 @@ It includes:
 
 > The frontend currently uses the connected wallet address as the authenticated caller for each contract operation.
 
-Live demo: https://loss-auction-protocol.vercel.app
 
 ## Notes
 
