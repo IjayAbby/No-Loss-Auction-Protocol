@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>No-Loss Auction Protocol</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>No-Loss Auction Protocol</h1>
+    <section>
+      <h2>Wallet / Contract Setup</h2>
+      <label>Secret Key
+        <input id="wallet-secret" type="password" placeholder="S..." />
+      </label>
+      <label>Contract ID
+        <input id="contract-id" type="text" placeholder="Contract ID" />
+      </label>
+      <label>Token Contract ID
+        <input id="token-id" type="text" placeholder="SEP-41 Token Contract ID" />
+      </label>
+      <button id="connect-button">Connect Wallet</button>
+    </section>
+
+    <section>
+      <h2>Create Auction</h2>
+      <label>Auction ID (hex 32 bytes)
+        <input id="create-auction-id" type="text" placeholder="e.g. 4f3b..." />
+      </label>
+      <label>Deadline (unix timestamp)
+        <input id="create-deadline" type="number" />
+      </label>
+      <label>Minimum Bid
+        <input id="create-minimum-bid" type="number" step="1" />
+      </label>
+      <button id="create-auction-button">Create Auction</button>
+    </section>
+
+    <section>
+      <h2>Place Bid</h2>
+      <label>Auction ID
+        <input id="bid-auction-id" type="text" />
+      </label>
+      <label>Bid Amount
+        <input id="bid-amount" type="number" step="1" />
+      </label>
+      <button id="place-bid-button">Place Bid</button>
+    </section>
+
+    <section>
+      <h2>Finalize / Cancel</h2>
+      <label>Auction ID
+        <input id="finalize-auction-id" type="text" />
+      </label>
+      <button id="finalize-auction-button">Finalize Auction</button>
+      <button id="cancel-auction-button">Cancel Auction</button>
+    </section>
+
+    <section>
+      <h2>Refund / Status</h2>
+      <label>Auction ID
+        <input id="refund-auction-id" type="text" />
+      </label>
+      <button id="claim-refund-button">Claim Refund</button>
+      <button id="load-auction-button">Load Auction Details</button>
+      <pre id="status-output"></pre>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/stellar-sdk@11.1.0/dist/stellar-sdk.min.js"></script>
+  <script src="https://unpkg.com/@stellar/soroban-client@0.3.0/dist/stellar-soroban-client.umd.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
