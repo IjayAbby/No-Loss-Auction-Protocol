@@ -1,0 +1,6 @@
+/contract/target
+**/*.rs.bk
+.DS_Store
+/node_modules
+/dist
+.vercel
